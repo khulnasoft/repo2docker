@@ -23,4 +23,4 @@ updates:
       interval: "weekly"
     ignore:
       - dependency-name: "python"
-        versions: ["~3.8"]
+        versions: ["3.8"]
