@@ -8,7 +8,7 @@
 
 ## Tested repo2docker command line flags
 
-- [`--target-repo-dir`](https://repo2docker.readthedocs.io/en/latest/usage.html#cmdoption-jupyter-repo2docker-target-repo-dir)
+- [`--target-repo-dir`](https://repo2docker.readthedocs.io/en/latest/usage.html#cmdoption-repo2docker-target-repo-dir)
 
 ### py2
 

@@ -44,7 +44,7 @@ from .utils import ByteSpecification, R2dState, chdir, get_platform
 class Repo2Docker(Application):
     """An application for converting git repositories to docker images"""
 
-    name = "jupyter-repo2docker"
+    name = "repo2docker"
     version = __version__
     description = __doc__
     # disable aliases/flags because we don't use the traitlets for CLI parsing

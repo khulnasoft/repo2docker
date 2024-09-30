@@ -44,7 +44,7 @@ Installing with ``pip``
 
 We recommend installing ``repo2docker`` with the ``pip`` tool::
 
-    python3 -m pip install jupyter-repo2docker
+    python3 -m pip install repo2docker
 
 for the latest release. To install the most recent code from the upstream repository, run::
 

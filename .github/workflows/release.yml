@@ -64,8 +64,8 @@ jobs:
   publish-docker:
     runs-on: ubuntu-22.04
     env:
-      DEFAULT_REGISTRY: quay.io
-      IMAGE_NAME: jupyterhub/repo2docker
+      DEFAULT_REGISTRY: docker.io
+      IMAGE_NAME: khulnasoft/repo2docker
 
     services:
       # So that we can test this in PRs/branches
@@ -105,7 +105,7 @@ jobs:
       - name: Setup push rights to Docker registry
         if: env.REGISTRY != 'localhost:5000'
         run: |
-          docker login -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" -p "${{ secrets.DOCKER_REGISTRY_TOKEN }}" "${{ env.REGISTRY }}"
+          docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_TOKEN }}" "${{ env.REGISTRY }}"
 
       # when building jupyter/repo2docker:master
       # also push jupyter/repo2docker:1.2.3-3.abcd1234 (replace + with -)

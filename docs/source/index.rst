@@ -1,7 +1,7 @@
-jupyter-repo2docker
+repo2docker
 ===================
 
-``jupyter-repo2docker`` is a tool to **build, run, and push Docker
+``repo2docker`` is a tool to **build, run, and push Docker
 images from source code repositories**.
 
 ``repo2docker`` fetches a repository

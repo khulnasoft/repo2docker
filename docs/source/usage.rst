@@ -33,7 +33,7 @@ Calling repo2docker
 
 repo2docker is called with this command::
 
-  jupyter-repo2docker <source-repository>
+  repo2docker <source-repository>
 
 where ``<source-repository>`` is:
 
@@ -48,7 +48,7 @@ of the source repository you want to build.
 For example, the following command will build an image of Peter Norvig's
 Pytudes_ repository::
 
-  jupyter-repo2docker https://github.com/norvig/pytudes
+  repo2docker https://github.com/norvig/pytudes
 
 Building the image may take a few minutes.
 
@@ -75,7 +75,7 @@ Building a specific branch, commit or tag
 To build a particular branch and commit, use the argument ``--ref`` and
 specify the ``branch-name`` or ``commit-hash``. For example::
 
-  jupyter-repo2docker --ref 9ced85dd9a84859d0767369e58f33912a214a3cf https://github.com/norvig/pytudes
+  repo2docker --ref 9ced85dd9a84859d0767369e58f33912a214a3cf https://github.com/norvig/pytudes
 
 .. tip::
    For reproducible builds, we recommend specifying a commit-hash to
@@ -114,7 +114,7 @@ To debug the docker image being built, pass the ``--debug`` parameter:
 
   .. code-block:: bash
 
-     jupyter-repo2docker --debug https://github.com/norvig/pytudes
+     repo2docker --debug https://github.com/norvig/pytudes
 
 This will print the generated ``Dockerfile``, build it, and run it.
 
@@ -125,14 +125,14 @@ be used by docker directly.
 
   .. code-block:: bash
 
-     jupyter-repo2docker --no-build --debug https://github.com/norvig/pytudes
+     repo2docker --no-build --debug https://github.com/norvig/pytudes
 
 
 Command line API
 ================
 
 .. autoprogram:: repo2docker.__main__:argparser
-  :prog: jupyter-repo2docker
+  :prog: repo2docker
 
 
 .. _Pytudes: https://github.com/norvig/pytudes

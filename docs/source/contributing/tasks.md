@@ -141,7 +141,7 @@ git push origin --tags
 ```
 
 GitHub Actions should create a
-new release on the [repo2docker PyPI](https://pypi.org/project/jupyter-repo2docker/).
+new release on the [repo2docker PyPI](https://pypi.org/project/repo2docker/).
 Once this has completed, make sure that the new version has been updated.
 
 ### Create a new release on the GitHub repository
@@ -167,13 +167,13 @@ automates this test.
 ```bash
 #! /bin/bash -e
 
-current_version=$(jupyter-repo2docker --version | sed s@+@-@)
+current_version=$(repo2docker --version | sed s@+@-@)
 echo "Comparing $(pwd) (local $current_version vs. $R2D_COMPARE_TO)"
 basename="dockerfilediff"
 
 diff_r2d_dockerfiles_with_version () {
-    docker run --rm -t -v "$(pwd)":"$(pwd)" --user 1000 jupyterhub/repo2docker:"$1" jupyter-repo2docker --no-build --debug "$(pwd)" &> "$basename"."$1"
-    jupyter-repo2docker --no-build --debug "$(pwd)" &> "$basename"."$current_version"
+    docker run --rm -t -v "$(pwd)":"$(pwd)" --user 1000 jupyterhub/repo2docker:"$1" repo2docker --no-build --debug "$(pwd)" &> "$basename"."$1"
+    repo2docker --no-build --debug "$(pwd)" &> "$basename"."$current_version"
 
     # remove first line logging the path
     sed -i '/^\[Repo2Docker\]/d' "$basename"."$1"

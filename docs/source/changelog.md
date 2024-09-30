@@ -282,7 +282,7 @@
 
 [Full changelog](https://github.com/jupyterhub/repo2docker/compare/2021.03.0...2021.08.0)
 
-The repo2docker container image has moved to [quay.io/jupyterhub/repo2docker](https://quay.io/repository/jupyterhub/repo2docker?tab=tags)
+The repo2docker container image has moved to [docker.io/jupyterhub/repo2docker](https://docker.io/repository/jupyterhub/repo2docker?tab=tags)
 
 ### New features
 
@@ -304,7 +304,7 @@ The repo2docker container image has moved to [quay.io/jupyterhub/repo2docker](ht
 
 ### Other merged PRs
 
-- Update README quay.io URL, Add docker latest tag {pr}`1075` by {user}`manics`
+- Update README docker.io URL, Add docker latest tag {pr}`1075` by {user}`manics`
 - GitHub workflow build and push to Docker hub {pr}`1071` by {user}`manics`
 - Rename master branch to main {pr}`1068` by {user}`manics`
 - Remove Pipfile & Pipfile.lock {pr}`1054` by {user}`yuvipanda`

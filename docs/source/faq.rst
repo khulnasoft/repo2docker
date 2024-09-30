@@ -114,7 +114,7 @@ To configure environment variables for all users of a repository use the
 When running repo2docker locally you can use the ``-e`` or ``--env`` command-line
 flag for each variable that you want to define.
 
-For example ``jupyter-repo2docker -e VAR1=val1 -e VAR2=val2 ...``
+For example ``repo2docker -e VAR1=val1 -e VAR2=val2 ...``
 
 Can I use repo2docker to bootstrap my own Dockerfile?
 -----------------------------------------------------

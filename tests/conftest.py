@@ -5,14 +5,14 @@ Custom test collector for our integration tests.
 Test lifecycle:
 - Find all directories that contain `verify` or `*.repos.yaml`
 - If `verify` is found:
-    - Run `jupyter-repo2docker` on the test directory.
+    - Run `repo2docker` on the test directory.
       - Extra arguments may be added as YAML list of strings in `extra-args.yaml`.
     - Run `./verify` inside the built container.
     - It should return a non-zero exit code for the test to be considered a
       successful.
 - If a `*.repos.yaml` is found:
     - For each entry of the form `{name, url, ref, verify}`
-        - Run `jupyter-repo2docker` with the `url` and `ref`
+        - Run `repo2docker` with the `url` and `ref`
         - Run the `verify` inside the built container
 """
 
@@ -217,7 +217,7 @@ class Repo2DockerTest(pytest.Function):
     def repr_failure(self, excinfo):
         err = excinfo.value
         if isinstance(err, SystemExit):
-            cmd = f'jupyter-repo2docker {" ".join(map(shlex.quote, self.args))}'
+            cmd = f'repo2docker {" ".join(map(shlex.quote, self.args))}'
             return f"{cmd} | exited with status={err.code}"
         else:
             return super().repr_failure(excinfo)

@@ -1,5 +1,5 @@
 VERSION=$(shell git rev-parse --short HEAD)
-IMAGE_PREFIX=jupyter/
+IMAGE_PREFIX=khulnasoft/
 
 build-image:
 	docker build -t $(IMAGE_PREFIX)repo2docker:v$(VERSION) .

@@ -46,7 +46,7 @@ __cmdclass = versioneer.get_cmdclass()
 __cmdclass["generate_dataverse_file"] = GenerateDataverseInstallationsFileCommand
 
 setup(
-    name="jupyter-repo2docker",
+    name="repo2docker",
     version=versioneer.get_version(),
     install_requires=[
         "chardet",
@@ -92,8 +92,7 @@ setup(
     cmdclass=__cmdclass,
     entry_points={
         "console_scripts": [
-            "jupyter-repo2docker = repo2docker.__main__:main",
-            "repo2docker = repo2docker.__main__:main",
+            "repo2docker = repo2docker.__main__:main",  # One entry is enough here
         ],
         "repo2docker.engines": ["docker = repo2docker.docker:DockerEngine"],
     },

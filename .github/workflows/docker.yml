@@ -41,8 +41,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          tags: jupyter/repo2docker:pr
+          tags: khulnasoft/repo2docker:pr
           push: false
 
       - name: Run repo2docker Docker image
-        run: docker run jupyter/repo2docker:pr repo2docker --version
+        run: docker run khulnasoft/repo2docker:pr repo2docker --version

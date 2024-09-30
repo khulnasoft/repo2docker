@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/jupyterhub/repo2docker/workflows/Test/badge.svg)](https://github.com/jupyterhub/repo2docker/actions)
 [![Documentation Status](https://readthedocs.org/projects/repo2docker/badge/?version=latest)](http://repo2docker.readthedocs.io/en/latest/?badge=latest)
 [![Contribute](https://img.shields.io/badge/I_want_to_contribute!-grey?logo=jupyter)](https://repo2docker.readthedocs.io/en/latest/contributing/contributing.html)
-[![Docker Repository on Quay](https://img.shields.io/badge/quay.io-container-green "Docker Repository on Quay")](https://quay.io/repository/jupyterhub/repo2docker?tab=tags)
+[![Docker Repository on Quay](https://img.shields.io/badge/docker.io-container-green "Docker Repository on Quay")](https://docker.io/repository/jupyterhub/repo2docker?tab=tags)
 
 `repo2docker` fetches a git repository and builds a container image based on
 the configuration files found in the repository.
@@ -47,7 +47,7 @@ This a quick guide to installing `repo2docker`, see our documentation for [a ful
 To install from PyPI:
 
 ```bash
-pip install jupyter-repo2docker
+pip install repo2docker
 ```
 
 To install from source:
@@ -69,7 +69,7 @@ optionally launch the container that you can use to explore the repository.
 Example:
 
 ```bash
-jupyter-repo2docker https://github.com/norvig/pytudes
+repo2docker https://github.com/norvig/pytudes
 ```
 
 After building (it might take a while!), it should output in your terminal
@@ -99,4 +99,4 @@ The philosophy of repo2docker is inspired by
 
 ## Docker Image
 
-Repo2Docker can be run inside a Docker container if access to the Docker Daemon is provided, for example see [BinderHub](https://github.com/jupyterhub/binderhub). Docker images are [published to quay.io](https://quay.io/repository/jupyterhub/repo2docker?tab=tags). The old [Docker Hub image](https://hub.docker.com/r/jupyter/repo2docker) is no longer supported.
+Repo2Docker can be run inside a Docker container if access to the Docker Daemon is provided, for example see [BinderHub](https://github.com/jupyterhub/binderhub). Docker images are [published to docker.io](https://docker.io/repository/jupyterhub/repo2docker?tab=tags). The old [Docker Hub image](https://hub.docker.com/r/jupyter/repo2docker) is no longer supported.
